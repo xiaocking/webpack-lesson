@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "iconfont";
+  src: url("./iconfont.eot?t=1588495476916"); /* IE9 */
+  src: url("./iconfont.eot?t=1588495476916#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPEAAsAAAAACBQAAAN3AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqDTIMsATYCJAMQCwoABCAFhG0HShsgB1GU7ckO2RfYNryJoNuxgAIKFIACGARo9ZgBQEHsYCAAIqjGsp7dOUSVRAEqtPRfHkghKQMkHRv1wuD/rukvsXBtni/LIauSGqW5nzvOvVwG6KbkZms3I+ZmUVUNyO6G5tYkYlbNGlk8UU8mCZW2NTTR/JsmWAkvGsqkv2hI/8l8+9gFM5np/ueY6aJwgPlta5fIv+ik1NHewDZuHVDWtV2T3QmdGN8C3oZLKD9NoGtNVeTyylYP0pKzLRCvTZ1CupSUUqq0hWbL2RSfIaFd3kQBn+Lfj/9wEGmKRuXsvfJ0WYO53/HxfGwSTmyHBFCv54d0iYp9IInnrcGHYmlxX0zXWBx3ArS1Fdaaaoznw5A0dzG23X95hKISTU5tHxxRqfI77vMJfjf4FH7P16jwhWxuYwF8BL4RdSU3UqSDTVfpqTDWHw773Posqq9PIBuP/NZePMwSvduQyzEOkGgiYoWrCJEbhSZG0I8McWgQDV/XVRQoy0BVkabB5YGAyV0In5w60R7jYwAYiPyNdHrmwuU1VSv16Ehu/J4H2X2hFJ8136X62806zCMxF0uD3SSMwVb3Fu1f11luciNHu6hsz4873UyspmB7uD0YJd/eTA+yt24C+3ZvoMrNRPgTDZ0rDxWBLv+AxofR0vZ4Jv6f4xbE6HIl3f6d3pYyJffLS/5Kbj1EIMxAlEFeE1R+OEoQKJZkBZEjWVIU53CiwJo29drtVso+4/WLUa6EwOfco96KqoD6KvoLqGfxXwSCOz8P//dKib92LsGvh2sFzjRe9feoDfX/qB7ZkabWcWXqOl9lvShdKIGCri7+vSpTT2uYF6PzhHZJLUHRsgpV2zoxqfvQ0HMETW2n0LVn9XLPjBQT2cGuK4AwNoJi6AtUY/fEpD5Cw9IbNI0jBl23wnbHns0ws3mJVKFGhifEZMLjnkdlk/oO6gcOlUVtzBqgDMwMadWb1coqeijXOBAc6m2lOOFSuGQFnoeOI4gvhYVM1Q2l/IlGg7d9U50JF7IukRClIA0xdIIwMYKHh/2VbO3nO5DugIOSPW0N2QEkBczZiZa65gjiqtEb1fYsrwkc0rUpCkdwkuAiVsCPHLcoEH77KgtilDpjRt43oUHd+FhjfX+z+wkPQJfzdRklamQ0NK92mNAwM3LoSY2bjpMra1qNMiYOPAUAAA==")
+      format("woff2"),
+    url("./iconfont.woff?t=1588495476916") format("woff"),
+    url("./iconfont.ttf?t=1588495476916") format("truetype"),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url("./iconfont.svg?t=1588495476916#iconfont") format("svg"); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-QRcode:before {
+  content: "\e704";
+}
+
+.icon-play-fill:before {
+  content: "\e72f";
+}
+
+.icon-add-account:before {
+  content: "\e741";
+}

@@ -4,7 +4,8 @@
   "description": "webpack study demo",
   "main": "index.js",
   "sideEffects": [
-    "*.css"
+    "*.css",
+    "*.scss"
   ],
   "scripts": {
     "build": "webpack --config ./build/webpack.prod.js",
@@ -22,6 +23,7 @@
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",

@@ -1,6 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
+
+function pathJoin(dir) {
+  return path.resolve(__dirname, dir);
+}
 
 module.exports = {
   entry: {
@@ -16,12 +22,34 @@ module.exports = {
       template: "./public/index.html",
     }),
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
+    new webpack.ProvidePlugin({
+      _: "loadsh",
+    }),
   ],
   optimization: {
     splitChunks: {
-      // include all types of chunks
-      chunks: "all",
+      // 默认配置
+      chunks: "async",
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 6,
+      maxInitialRequests: 4,
+      automaticNameDelimiter: "~",
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
     },
+    usedExports: true,
   },
   module: {
     rules: [
@@ -45,7 +73,9 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
+
+          // "style-loader",
           {
             loader: "css-loader",
             options: {
@@ -77,7 +107,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        use: [
+          {
+            loader: "babel-loader",
+          },
+        ],
       },
     ],
   },

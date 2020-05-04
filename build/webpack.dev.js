@@ -7,9 +7,7 @@ const devConfig = {
   mode: "development",
   devtool: "cheap-module-eval-source-map", // development
   plugins: [new webpack.HotModuleReplacementPlugin()],
-  optimization: {
-    usedExports: true,
-  },
+
   devServer: {
     // contentBase: "./dist",
     open: true,

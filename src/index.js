@@ -1,9 +1,19 @@
 import _ from "loadsh";
-import { add } from "./lib/utils";
+import { addDiv } from "./about";
 
-const a = _.join([1, 2, 3, 4], "----");
+// import "./index.scss";
 
-console.log(add(2, 7));
-
-// 同步代码 只要在 optimization中配置 splitChunks 的 chunks为 'all'
-// 异步代码 自动就会做代码分割
+addDiv();
+// const root = document.getElementById("root");
+// function getComponent() {
+//   return import(/* webpackChunkName:"loadsh" */ "loadsh").then(
+//     ({ default: _ }) => {
+//       const div = document.createElement("div");
+//       div.innerHTML = _.join(["hello", "world"], "==>");
+//       return div;
+//     }
+//   );
+// }
+// getComponent().then((ele) => {
+//   root.append(ele);
+// });

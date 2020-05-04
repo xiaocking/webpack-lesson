@@ -1,16 +1,11 @@
 const path = require("path");
-
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
-  mode: "development",
   entry: {
     main: "./src/index.js",
   },
-  devtool: "cheap-module-eval-source-map", // development
-  // devtool: "cheap-module-source-map", // production
   output: {
     // publicPath: "./",
     filename: "[name]_[hash:6].js",
@@ -21,11 +16,7 @@ module.exports = {
       template: "./public/index.html",
     }),
     new CleanWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
   ],
-  optimization: {
-    usedExports: true,
-  },
   module: {
     rules: [
       {
@@ -83,12 +74,5 @@ module.exports = {
         loader: "babel-loader",
       },
     ],
-  },
-  devServer: {
-    // contentBase: "./dist",
-    open: true,
-    port: "8090",
-    hot: true,
-    hotOnly: true,
   },
 };

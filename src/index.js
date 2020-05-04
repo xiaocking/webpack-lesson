@@ -1,6 +1,3 @@
-// import "@babel/polyfill";
-const arr = [new Promise(() => {}), new Promise(() => {})];
+import { add } from "./lib/utils";
 
-arr.map((item) => {
-  console.log(item);
-});
+console.log(add(2, 3));

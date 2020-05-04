@@ -9,7 +9,7 @@ module.exports = {
   output: {
     // publicPath: "./",
     filename: "[name]_[hash:6].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,6 +17,12 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
   ],
+  optimization: {
+    splitChunks: {
+      // include all types of chunks
+      chunks: "all",
+    },
+  },
   module: {
     rules: [
       {

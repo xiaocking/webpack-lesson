@@ -9,7 +9,7 @@ const devConfig = {
   plugins: [new webpack.HotModuleReplacementPlugin()],
 
   devServer: {
-    // contentBase: "./dist",
+    contentBase: "./bundle",
     open: true,
     port: "8090",
     hot: true,
